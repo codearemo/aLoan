@@ -126,7 +126,7 @@ router.post('/login', (req, res, next) => {
 });
 
 // Remove User
-router.delete('/:userId', (req, res, next) => {
+router.delete('a', (req, res, next) => {
   User.remove({ _id: req.params.userId })
     .exec()
     .then(() => {

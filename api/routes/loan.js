@@ -68,22 +68,18 @@ router.post('/', (req, res, next) => {
     endDate: req.body.endDate
   });
 
-  res.status(200).json({
-    loan: newLoan
-  });
-
-  // newLoan
-  //   .save()
-  //   .then(loan => {
-  //     res.status(200).json({
-  //       loan: loan
-  //     });
-  //   })
-  //   .catch(error => {
-  //     res.status(500).json({
-  //       error: error
-  //     });
-  //   });
+  newLoan
+    .save()
+    .then(loan => {
+      res.status(200).json({
+        loan: loan
+      });
+    })
+    .catch(error => {
+      res.status(500).json({
+        error: error
+      });
+    });
 });
 
 router.delete('/:loanId', (req, res, next) => {
@@ -103,23 +99,3 @@ router.delete('/:loanId', (req, res, next) => {
 });
 
 module.exports = router;
-
-// [
-//   {
-//       "_id": "5d08d059c82801832d09af26",
-//       "name": "BetaMoni",
-//       "description": "More money in the community",
-//       "interest_rate": 2,
-//       "amount": 10000,
-//        "startDate": new Date()
-//        "endDate": new Date()
-//   },
-//   {
-//       "_id": "5d08d059c82801832d09af28",
-//       "name": "Save Bank",
-//       "description": "Improving standard of living",
-//       "interest_rate": 1.4,
-//       "amount": 200000,
-//       "startDate": new Date()
-//       "endDate": new Date()
-// ]
