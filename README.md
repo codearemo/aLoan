@@ -12,7 +12,8 @@ My get aLaon App:
 
 
 - Users API
-GET /users - Fetch all users
+
+  GET /users - Fetch all users
 
   POST /users/register - Register a new user
   {registerEmail: String, registerPassword: String}
@@ -28,6 +29,7 @@ GET /users - Fetch all users
 
 
 - Loan API
+
   GET /loans - Fetch all loans
 
   POST /loans- Add new loan 
