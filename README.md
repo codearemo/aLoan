@@ -3,9 +3,11 @@
 My get aLaon App:
 
 ##########################################
+
 * Clone repo
 * Run npm install
 * Run npm start
+
 ##########################################
 
 
